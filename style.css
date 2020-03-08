@@ -1,0 +1,85 @@
+*
+{
+    border-style:solid;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body
+{
+    font-size: 10px;
+}
+
+
+.Content
+{
+    margin: 20px auto 0 auto;
+
+}
+.blog-post
+{
+    background-color: turquoise;
+    width: 75%;
+    float: left;
+    padding-right: 20px;
+}
+.other-posts
+{
+    width: 25%;
+    background-color: yellow;
+    float: left;
+}
+.clear-fix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.Author-box
+{
+    background-color: violet;
+    padding-top: 15px;
+    border-top: 1px solid grey;
+    margin-top: 10px;
+   
+}
+
+
+
+h1,h2 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+h1 
+{
+    font-size: 40px;
+    color: rgb(141, 42, 42);
+    margin-bottom: 10px;
+}
+h2 
+{
+  
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+.main-text
+{
+    color: rgb(0, 0, 0);
+    margin-bottom: 8px;
+
+}
+.Author-text
+{
+   color: rgb(19, 55, 146); 
+}
+
+.pibe
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
