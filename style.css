@@ -29,6 +29,7 @@ body
 {
     width: 75%;
     padding-right: 20px;
+    position: relative;
     
     float: left;
 }
@@ -46,6 +47,13 @@ body
 .other
 {
     margin-bottom: 40px;
+}
+.date
+{
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    font-size: 15px;
 }
 
 .Author-box
@@ -83,14 +91,14 @@ h1,h2
 
 h1 
 {
-    font-size: 40px;
+    font-size: 35px;
     color: rgb(141, 42, 42);
     margin-top: 5px;
 }
 h2 
 {
   
-    font-size: 25px;
+    font-size: 23px;
     
     color: green;
     
