@@ -110,6 +110,10 @@ h2
     color: rgb(0, 0, 0);
     margin-bottom: 8px;
     margin-top: 0px;
+    font-family: sans-serif;
+    line-height: 150%;
+    font-size: 15px;
+    font-weight: 100;
 
 }
 .pibe
