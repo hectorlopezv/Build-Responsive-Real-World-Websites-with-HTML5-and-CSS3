@@ -7,6 +7,10 @@
         <link rel="stylesheet" type="text/css" href="./vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="./vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="./resources/css/queries.css">
+        <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
 
     </head>
@@ -17,24 +21,26 @@
             <nav>
                 <div class="row">
                     <img src="resources/img/logo-white.png" alt="omnifood logo" class="logo">
-                    <ul class="main-nav">
-                        <li><a href="#">Food Delivery</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="#">Our cities</a></li>
-                        <li><a href="#">Sign up</a></li>
+                    <img src="resources/img/logo.png" alt="omnifood logo" class="logo-black">
+                    <ul class="main-nav jsmain-nav">
+                        <li><a href="#features">Food Delivery</a></li>
+                        <li><a href="#works">How it works</a></li>
+                        <li><a href="#cities">Our cities</a></li>
+                        <li><a href="#plans">Sign up</a></li>
                     </ul>
+                    <ion-icon name="list-outline" id="jsnavicon"></ion-icon>
                 </div>
             </nav>
 
             <div class="hero-text-box" > 
                 <h1>Goodbye junk food.<br> Hello super healthy meals</h1>
-                <a class="btn btn-full" href="#">I’m hungry </a>
-                <a class="btn btn-ghost" href="#">Show me more</a>
+                <a class="btn btn-full jsscroll-to-plans" href="#">I’m hungry </a>
+                <a class="btn btn-ghost jscroll-to-start" href="#">Show me more</a>
             </div>
 
         </header>
 
-        <section class="section-features">
+        <section class="section-features jssection-features " id="features">
             <div class="row">
                 <h2>Get food fast &mdash; not fast food</h2>
                 <p class="long-copy">
@@ -44,7 +50,7 @@
                 </p>
             </div>
 
-            <div class="row">
+            <div class="row jswp-1">
                 
                 <div class="col span-1-of-4 box">
                     <ion-icon name="stopwatch-outline"></ion-icon>
@@ -150,7 +156,7 @@
             
         </section>
 
-        <section class="section-steps">
+        <section class="section-steps" id="works">
             <div class="row">
                 <h2>
                     How it works &mdash; Simple as 1, 2, 3
@@ -159,8 +165,8 @@
 
             <div class="row">
 
-                <div class="col span-1-of-2 steps-box">
-                    <img class="app-screeen" src="./resources/img/app-iPhone.png" alt="omnifood app on iphone">
+                <div class="col span-1-of-2 steps-box jswp-2">
+                    <img class="app-screeen " src="./resources/img/app-iPhone.png" alt="omnifood app on iphone">
                 </div>
 
                 <div class="col span-1-of-2 steps-box">
@@ -195,14 +201,14 @@
             </div>
         </section>
 
-        <section class="section-cities">
+        <section class="section-cities" id="cities">
             <div class="row">
                 <h2>
                    We're currently in these cities
                 </h2>
             </div>
 
-            <div class="row">
+            <div class="row jswp-3">
                 
                 <div class="col span-1-of-4 box row-cities">
                     <figure>
@@ -350,7 +356,7 @@
             </div>
         </section>
 
-        <section class="section-plans">
+        <section class="section-plans jssection-plans" id="plans">
             <div class="row">
                 <h2>
                     start eating healthy today
@@ -360,15 +366,12 @@
             <div class="row">
 
                 <div class="col span-1-of-3">
-                    <div class="plan-box">
+                    <div class="plan-box jswp-4">
                         <div>
                             <h3>Premium</h3>
-                            <p class="plan-price">
-                                $399 <span> per month</span>
-                            </p>
+                            <p class="plan-price"> $399 <span> per month</span></p>
                             <p class="plan-price-meal"> thats only 13.33 per meal </p>
                         </div>
-
                         <div>
                             <ul>
                                 <li>
@@ -529,7 +532,9 @@
                         </div>
 
                     </div>
+
                 </form>
+
             </div>
         </section>
 
@@ -565,7 +570,11 @@
         </footer>
 
 
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/vendors/js/jquery.waypoints.min.js"></script>
+  <script src="/resources/js/script.js"></script>
     </body>
 
 </html>

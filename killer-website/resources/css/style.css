@@ -1,8 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
 /*----------------------Basic Setup--------------------------------*/
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html {
@@ -12,7 +21,7 @@ html {
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
-    text-rendering: optimizeLegibility
+    overflow-x: hidden;
 }
 
 
@@ -110,6 +119,8 @@ a:visited{
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-botoom 0.2s, color 0.2s;
+    -o-transition: border-botoom 0.2s, color 0.2s;
     transition: border-botoom 0.2s, color 0.2s;
 }
 
@@ -127,6 +138,8 @@ a:active{
     padding: 10px 30px;
     text-decoration: none;
     border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    -o-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
     margin-right: 15px;
 }
@@ -165,7 +178,9 @@ a:active{
 /*----------------------Header-------------------------------*/
 
 header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.705)), url(/killer-website/resources/img/hero.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.699)), to(rgba(0, 0, 0, 0.705))), url(/resources/img/hero.jpg);
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.705)), url(/resources/img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.705)), url(/resources/img/hero.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -177,8 +192,11 @@ header{
     width: 1440px;
     top: 55%;
     left: 60%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
+
 .main-nav{
 
     float: right;
@@ -197,6 +215,8 @@ header{
     color: #fff;
     text-decoration: none;
     border: solid 2px transparent;
+    -webkit-transition: border-solid 0.2s;
+    -o-transition: border-solid 0.2s;
     transition: border-solid 0.2s;
     font-size: 88%;
     text-transform: uppercase;
@@ -251,14 +271,24 @@ header{
     opacity: 0.7;
     width: 100%;
     height: auto;
-    transform: scale(1.10);
+    -webkit-transform: scale(1.10);
+        -ms-transform: scale(1.10);
+            transform: scale(1.10);
+    -webkit-transition: opacity 0.4s, -webkit-transform 0.5s;
+    transition: opacity 0.4s, -webkit-transform 0.5s;
+    -o-transition: transform 0.5s, opacity 0.4s;
     transition: transform 0.5s, opacity 0.4s;
+    transition: transform 0.5s, opacity 0.4s, -webkit-transform 0.5s;
     visibility: visible;
 }
 
 .meal-photo img:hover{
 
-    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+
+        -ms-transform: scale(1.02);
+
+            transform: scale(1.02);
     opacity: 1;
 }
 
@@ -285,6 +315,7 @@ header{
 
 .app-screeen{
     width: 40%;
+    display: inline-block;
 }
 
 .works-step{
@@ -334,8 +365,12 @@ header{
 }
 
 .city-feature{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 0px;
     height: 30px;
     margin-bottom: 5px;
@@ -358,7 +393,11 @@ header{
 /*-----------------------------------section-testimonials----------*/
 .section-testimonials{
 
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ) , url(/killer-website/resources/img/back-customers.jpg);
+    background-image:  -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8)) ) , url(/resources/img/back-customers.jpg);
+
+    background-image:  -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ) , url(/resources/img/back-customers.jpg);
+
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ) , url(/resources/img/back-customers.jpg);
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
@@ -407,7 +446,8 @@ blockquote:before{
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
-    box-shadow: 0 2px 2px #efefef;
+    -webkit-box-shadow: 0 2px 2px #efefef;
+            box-shadow: 0 2px 2px #efefef;
 }
 
 .plan-box div{
@@ -425,10 +465,19 @@ blockquote:before{
 
 .plan-box li{
     padding: 5px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height:  45px;
 }
 
@@ -493,8 +542,9 @@ textarea{
     background-color: #e67e22;
     border: 1px solid #e67e22;
     color: #fff;
-    transform: background-color 0.2s, color 0.2s;
-
+    -webkit-transform: background-color 0.2s, color 0.2s;
+        -ms-transform: background-color 0.2s, color 0.2s;
+            transform: background-color 0.2s, color 0.2s;
 }
 
 .btn-send:hover,
@@ -541,6 +591,8 @@ footer{
     text-decoration: none;
     border: none;
     color: #888;
+    -webkit-transition: color 0.2s;
+    -o-transition: color 0.2s;
     transition: color 0.2s;
     
 
@@ -556,6 +608,8 @@ footer{
     text-decoration: none;
     border: none;
     color: #888;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
     transition: color 0.3s;
 
 }
@@ -564,6 +618,8 @@ footer{
     font-size: 20px;
     color: #888;
     margin: 0px;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
     transition: color 0.3s;
 }
 
@@ -577,5 +633,98 @@ footer p{
     color: #888;
     text-align: center;
     font-size: 90%;
+}
+
+
+/*---------------jquery sticky classs--------------*/
+
+
+
+.logo-black{
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+
+.sticky {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.952);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    color: #555;
+    text-decoration: none;
+    border: solid 2px transparent;
+    -webkit-transition: border-solid 0.2s;
+    -o-transition: border-solid 0.2s;
+    transition: border-solid 0.2s;
+    font-size: 88%;
+    text-transform: uppercase;
+    padding: 16px 0;
+}
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+    border-bottom: #e67e22 solid 2px;
+}
+
+.sticky .logo-black{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    
+}
+.sticky .logo{
+    display: none;
+}
+
+.sticky .main-nav{
+
+    float: right;
+    list-style: none;
+    margin-top: 18px;
+
+
+}
+.main-nav li{
+
+    display: inline-block;
+    margin-right: 40px;
+}
+
+/*---animation using animation.css----*/
+
+.jswp-1,.jswp-2,.jswp-3{
+    opacity: 0;
+    --animate-duration: 1s;
+}
+.jswp-4{
+    --animate-duration: 1s;
+}
+.jswp-1.animate__fadeIn,
+.jswp-2.animate__slideInUp,
+.jswp-3.animate__fadeIn{
+    opacity: 1;
+}
+
+
+/*----movile navi ----*/
+#jsnavicon{
+    color: #fff;
+    float:right;
+    margin-top: 12px;
+    cursor: pointer;
+    /*height: 30px;*/
+    font-size: 30px;
+    display:none;
 }
 
