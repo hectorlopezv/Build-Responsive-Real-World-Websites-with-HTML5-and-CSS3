@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="\\wsl$\Ubuntu-20.04\home\hectorvmlopez\Build-Responsive-Real-World-Websites-with-HTML5-and-CSS3\killer-website\resources\fav-icons/mstile-150x150.png"/>
+            <TileColor>#da532c</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
